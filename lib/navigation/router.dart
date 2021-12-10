@@ -1,5 +1,5 @@
 import '../app_exporter.dart';
-import 'routes.dart';
+import 'screen_404.dart';
 
 // This is an Itegrated app Router privider embedded with the navigation Notifier
 final appRouterProvider = Provider<GoRouter>(
@@ -17,11 +17,7 @@ final appRouterProvider = Provider<GoRouter>(
 
       refreshListenable: navigationNotifier,
 
-      errorBuilder: (context, state) => ErrorWidget(
-        Exception(
-          state.error.toString(),
-        ),
-      ),
+      errorBuilder: (context, state) => Screen404(state: state),
     );
 
     return appRouter;

@@ -38,6 +38,12 @@ class DetailScreen extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        actions: [
+          LinkCopier(
+            backgroundColor: detailColor,
+            pageName: "detail/$itemIndex",
+          ),
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

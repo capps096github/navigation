@@ -11,6 +11,12 @@ class ListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('List Screen'),
         backgroundColor: blueGrey,
+        actions: [
+          LinkCopier(
+            backgroundColor: blueGrey,
+            pageName: Routes.listRoute.path,
+          ),
+        ],
       ),
       body: ListView.builder(
         key: PageStorageKey(Routes.listRoute.path),

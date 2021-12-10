@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 
 import '../app_exporter.dart';
 
@@ -10,7 +9,9 @@ class NavigationNotifier extends ChangeNotifier {
 // buh in a real world app, we put here the firebase inits
 
   bool _initialized = false;
-  bool _loggedIn = false;
+
+  // this checks if user has logged into the app
+  bool _loggedIn = true;
 
   bool get isInitialized => _initialized;
   bool get isLoggedIn => _loggedIn;
@@ -34,4 +35,3 @@ final appNavigationNotifier = ChangeNotifierProvider<NavigationNotifier>(
     return NavigationNotifier();
   },
 );
-

@@ -33,6 +33,10 @@ class HomeScreen extends StatelessWidget {
               style:
                   Theme.of(context).textTheme.headline4!.copyWith(color: white),
             ),
+            LinkCopier(
+              backgroundColor: maroon,
+              pageName: Routes.homeRoute.name,
+            ),
             const Spacer(),
             TextButton.icon(
               onPressed: () {
@@ -41,7 +45,6 @@ class HomeScreen extends StatelessWidget {
                   params: {
                     'index': listItemIndex.toString(),
                   },
-                  
                 );
               },
               style: TextButton.styleFrom(
@@ -49,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: detailColor,
               ),
               icon: const Icon(CupertinoIcons.link),
-              label:const Text("Deep link to Item $listItemIndex"),
+              label: const Text("Deep link to Item $listItemIndex"),
             ),
           ],
         ),
